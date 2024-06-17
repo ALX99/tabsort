@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Sorter",
+  "version": "1.0",
+  "description": "Sort tabs in tab groups by the host.",
+  "permissions": [
+    "tabGroups",
+    "tabs",
+    "storage",
+    "contextMenus"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {}
+}
