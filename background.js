@@ -48,7 +48,8 @@ function sortTabs() {
     const tabGroups = tabs.reduce((groups, tab) => {
       let name = tab.url;
       try {
-        name = new URL(tab.url).hostname.replace(/^www\./, '');
+        // Remove www. and TLD from hostname
+        name = new URL(tab.url).hostname.replace(/^www\./, '').replace(/\.[^.]*$/, '');
       } catch (ex) {
         console.log("invalid url", name, ex);
       }
